@@ -6,13 +6,4 @@ exports.createPages = async ({ actions }) => {
     context: {},
     defer: true,
   })
-  createTypes(`
-    type MarkdownRemarkFrontmatter {
-      description: string
-    }
-
-    type MarkdownRemark implements Node {
-      frontmatter: MarkdownRemarkFrontmatter
-    }
-  `)
 }
