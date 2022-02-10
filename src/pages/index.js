@@ -28,7 +28,7 @@ return (
      height="100%"
      width="100%"
      loop
-     muted
+     muted={false}
      autoPlay
      >
       <source src='https://res.cloudinary.com/dccwzpgnz/video/upload/v1644479263/mot-videos/bg-video_flqh4q.mp4' type="video/mp4" />
@@ -38,7 +38,7 @@ return (
       <Header />
     </div>
     <div className="highright">
-      <h1>Download your dairy motivation videos</h1>
+      <h1>Download your dairy motivation videos.</h1>
       <p>Would you like to see a video that motivates and inspires you? Did your day get worse and you want to cheer up? Well, now it's possible with just one click.</p>
     </div>
     </div>
