@@ -29,7 +29,7 @@ return (
      width="100%"
      loop
      muted={false}
-     autoPlay
+     autoPlay={true}
      >
       <source src='https://res.cloudinary.com/dccwzpgnz/video/upload/v1644479263/mot-videos/bg-video_flqh4q.mp4' type="video/mp4" />
     </video>
