@@ -1,11 +1,22 @@
 import * as React from "react"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import Video from "../assets/videos/bg-video.mp4";
 import Header from "../components/header";
 import Installation from '../components/installation';
+import { graphql } from "gatsby"
+import PostLink from "../components/post-link"
 
-const IndexPage = () => (
+const IndexPage = ({
+  data: {
+    allMarkdownRemark: { edges },
+  },
+}) => {
+
+  const Posts = edges
+  .filter(edge => !!edge.node.frontmatter.date) // You can filter your posts based on some criteria
+  .map(edge => <PostLink key={edge.node.id} post={edge.node} />)
+
+return (
   <Layout>
     <Seo title="Home" />
     <div className="banner-container">
@@ -31,15 +42,6 @@ const IndexPage = () => (
       <p>Would you like to see a video that motivates and inspires you? Did your day get worse and you want to cheer up? Well, now it's possible with just one click.</p>
     </div>
     </div>
-   
-    {/* <StaticImage
-      src="../images/gatsby-astronaut.png"
-      width={300}
-      quality={95}
-      formats={["auto", "webp", "avif"]}
-      alt="A Gatsby astronaut"
-      style={{ marginBottom: `1.45rem` }}
-    /> */}
     <div
      style={{
        display:'flex',
@@ -48,14 +50,30 @@ const IndexPage = () => (
        padding:'2% 20%'
      }}
     >
-   
-      {/* <p>
-        <Link to="/page-2/" className="text-green-500">Ubuntu</Link> <br />
-        <Link to="/using-typescript/">PI os</Link> <br />
-      </p> */}
       <Installation />
+      <div>{Posts}</div>
     </div>
   </Layout>
 )
+}
+
+export const pageQuery = graphql`
+  query {
+    allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
+      edges {
+        node {
+          id
+          excerpt(pruneLength: 250)
+          frontmatter {
+            date(formatString: "MMMM DD, YYYY")
+            slug
+            description
+            title
+          }
+        }
+      }
+    }
+  }
+`
 
 export default IndexPage
