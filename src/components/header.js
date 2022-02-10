@@ -1,32 +1,24 @@
 import * as React from "react"
 import PropTypes from "prop-types"
-import { Link } from "gatsby"
+import { downloadButtonStyle } from './stylesheet';
 
 const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
+  <header>
     <div
       style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
+        display: 'flex',
+        justifyContent: 'space-between',
+        padding: '10px 50px'
       }}
     >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
+      <h3 style={{ color: 'white', backgroundColor:'black',padding:'10px' }}>Motivation Videos</h3>
+      <button style={downloadButtonStyle}>
+        <a target="_blank" href="https://github.com/PatrickNiyogitare28/motivation-videos-scam/archive/refs/tags/v1.0.1.zip"
+          style={{ color: 'white', textDecoration: 'none' }}
         >
-          {siteTitle}
-        </Link>
-      </h1>
+          Download
+        </a>
+      </button>
     </div>
   </header>
 )

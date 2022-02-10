@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@700&family=Poppins:wght@100;200&family=Roboto:wght@100&display=swap');
+*{
+  font-family: 'Oxygen', sans-serif;
+font-family: 'Poppins', sans-serif;
+font-family: 'Roboto', sans-serif;
+}
 html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -594,4 +600,33 @@ pre tt:after {
   html {
     font-size: 100%;
   }
+}
+
+/* ------------------------------- custom style ------------------------------ */
+.banner-container{
+  position: relative;
+  background-color: black;
+}
+.banner-wrapper{
+  background-color: black;
+  /* opacity: 0.2; */
+}
+.nav-wrapper{
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.highright{
+  position: absolute;
+  top: 0;
+  margin-top: 10em;
+  color: white;
+  background: rebeccapurple;
+  margin-left: 5em;
+  padding: 20px;
+  width: 50%;
+}
+.highright h1{
+  font-weight: bolder;
+  font-size: 5em;
 }
