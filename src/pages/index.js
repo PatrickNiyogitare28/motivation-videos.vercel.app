@@ -1,7 +1,4 @@
 import * as React from "react"
-import { Link } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
-
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import Video from "../assets/videos/bg-video.mp4";
@@ -23,7 +20,7 @@ const IndexPage = () => (
      muted
      autoPlay
      >
-      <source src={Video} type="video/mp4" />
+      <source src='https://res.cloudinary.com/dccwzpgnz/video/upload/v1644479263/mot-videos/bg-video_flqh4q.mp4' type="video/mp4" />
     </video>
     </div>
     <div class="nav-wrapper">
