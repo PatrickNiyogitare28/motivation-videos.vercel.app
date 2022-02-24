@@ -13,7 +13,7 @@ const Header = ({ siteTitle }) => (
     >
       <h3 style={{ color: 'white', backgroundColor:'black',padding:'10px' }}>Motivation Videos</h3>
       <button style={downloadButtonStyle}>
-        <a target="_blank" href="https://github.com/PatrickNiyogitare28/motivation-videos-scam/archive/refs/tags/v1.0.1.zip"
+        <a target="_blank" href="https://github.com/PatrickNiyogitare28/motivation-videos/archive/refs/tags/v1.0.3.zip"
           style={{ color: 'white', textDecoration: 'none' }}
         >
           Download
